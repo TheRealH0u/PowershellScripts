@@ -7,5 +7,8 @@ Function Set-WallPaper($Value)
  rundll32.exe user32.dll, UpdatePerUserSystemParameters
 
 }
-Invoke-WebRequest -Uri https://i.ibb.co/8BbpnhM/wallpaper.png -OutFile wallpaper.bmp
+Invoke-WebRequest -Uri "https://i.ibb.co/8BbpnhM/wallpaper.png" -OutFile "$env:USERPROFILE\Desktop\wallpaper.bmp"
 Set-WallPaper -value "$env:USERPROFILE\Desktop\wallpaper.bmp"
+
+
+
