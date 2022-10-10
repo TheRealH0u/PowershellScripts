@@ -38,7 +38,7 @@ namespace Wallpaper
      key.Close();
       }
     }
-}
+  }
 }
 "@
 [Wallpaper.Setter]::SetWallpaper("$Env:Temp\b.jpg" , 2 )
