@@ -34,9 +34,8 @@ namespace Wallpaper
            break;
         case Style.NoChange :
            break;
-     
-     key.Close();
       }
+      key.Close();
     }
   }
 }
